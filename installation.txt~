@@ -1,3 +1,0 @@
-systemctl enable myservice.service
-systemctl start myservice.service
-systemctl status myservice.service
