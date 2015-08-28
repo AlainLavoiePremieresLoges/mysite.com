@@ -3,7 +3,7 @@ ExecStart=/usr/bin/nodejs /srv/www/mysite.com/serverA.js Server[A] 5000 192.168.
 Restart=always
 StandardOutput=syslog
 StandardError=syslog
-SyslogIdentifier=node-app-1
+SyslogIdentifier=node-app-5000
 User=alainlavoie
 Group=alainlavoie
 Environment=NODE_ENV=production PORT=5000
