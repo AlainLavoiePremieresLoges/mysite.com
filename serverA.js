@@ -26,7 +26,7 @@ var singleFunction = function (req, res) {
         res.end();
     } else {
         res.writeHead(200, {'Content-Type': 'text/plain'});
-        res.end(myServer + ': Hello World ' + myCounter + '\n');
+        res.end(myServer + ': Hello Me ' + myCounter + '\n');
         myCounter = myCounter +1 ;
     }
 };
