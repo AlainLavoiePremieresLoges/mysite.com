@@ -3,6 +3,7 @@ var http = require('http');
 var myServer="ServerA"
 var myCounter=0;
 var serverPort = 1337;
+var serverAddress = '192.168.1.164';
 
 process.argv.forEach(function (val, index, array) {
     //console.log(index + ': ' + val);
@@ -12,6 +13,9 @@ process.argv.forEach(function (val, index, array) {
 	 break;
        case 3:
    	 serverPort=val;
+	 break;
+       case 4:
+   	 serverAddress=val;
 	 break;
     }
 });
@@ -26,5 +30,5 @@ var singleFunction = function (req, res) {
         myCounter = myCounter +1 ;
     }
 };
-http.createServer(singleFunction).listen(serverPort, '127.0.0.1');
-console.log('Server running at http://127.0.0.1:' + serverPort + '/');
+http.createServer(singleFunction).listen(serverPort, serverAddress);
+console.log('Server running at http://' + serverAddress  + ':' + serverPort + '/');
