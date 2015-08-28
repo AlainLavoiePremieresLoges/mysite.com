@@ -1,5 +1,5 @@
-cp node-app-A-conf.service /etc/systemd/system/
+sudo cp /srv/www/mysite.com/node-app-A-conf.service /etc/systemd/system/
 
-systemctl enable node-app-A-conf.service
-systemctl start node-app-A-conf.service
-systemctl status node-app-A-conf.service
+sudo systemctl enable /etc/systemd/system/node-app-A-conf.service
+sudo systemctl start node-app-A-conf.service
+sudo systemctl status node-app-A-conf.service
