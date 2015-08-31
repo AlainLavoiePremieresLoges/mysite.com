@@ -11,7 +11,9 @@ cd /srv/www/mysite.com || error_exit "error changing directory!. now exiting..."
 npm install || error_exit "error running npm install! now exiting... "
 
 # update nginx configurations
-ln -s /srv/www/mysite.com/etc.nginx.node-server.nginx /etc/nginx/sites-available/mysite.com
+#sudo ln -s /srv/www/mysite.com/etc.nginx.node-server.ngnix /etc/nginx/sites-available/mysite.com
+#sudo ln -s /srv/www/mysite.com/etc.nginx.node-server.ngnix /etc/nginx/sites-enabled/mysite.com
+      
 
 # restart service; enabled user published to be a sudoer (use "sudo visudo" to enable user)
 sudo systemctl restart node-app-A-conf.service
