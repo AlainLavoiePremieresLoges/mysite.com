@@ -20,7 +20,7 @@ var logger = new (winston.Logger)({
 logger.log('info', 'First');
 
 app.get('/', function (req, res) {
-  logger.log('debug', 'Express counter=' + myCounter );
+  logger.log('info', 'Express counter=' + myCounter );
   res.send('Express site, counter=' + myCounter++);
 });
 
