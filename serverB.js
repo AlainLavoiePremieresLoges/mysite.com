@@ -3,7 +3,6 @@ var myCounter=0;
 var serverPort = 3001;
 var serverAddress = '192.168.1.142';
 
-//var FileStreamRotator = require('file-stream-rotator')
 var express = require('express');
 var app = express();
 var morgan = require('morgan');
@@ -12,27 +11,14 @@ var logDirectory = __dirname + '/logs';
 var winston = require('winston');
 
 
-var logger = new (winston.Logger)({
-  transports: [
-    new (winston.transports.Console)(),
-    new (winston.transports.File)({ filename: 'server-console.log' })
-  ]
-});
-
-logger.log('info', 'First');
-
-//fs.existsSync(logDirectory) || fs.mkdirSync(logDirectory);
-
-// create a rotating write stream
-//var accessLogStream = FileStreamRotator.getStream({
-
-//  filename: logDirectory + '/access-%DATE%.log',
-//  frequency: 'daily',
-//  verbose: false
-//})
-
-// setup the logger
-//app.use(morgan('combined', {stream: accessLogStream}));
+//var logger = new (winston.Logger)({
+//  transports: [
+//    new (winston.transports.Console)(),
+//    new (winston.transports.File)({ filename: 'server-console.log' })
+//  ]
+//});
+//
+//logger.log('info', 'First');
 
 app.get('/', function (req, res) {
   res.send('Express site, counter=' + myCounter++);
