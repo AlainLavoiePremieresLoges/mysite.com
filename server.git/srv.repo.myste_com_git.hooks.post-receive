@@ -10,15 +10,15 @@ git --work-tree=/srv/www/mysite.com --git-dir=/srv/repo/mysite.com.git checkout 
 cd /srv/www/mysite.com || error_exit "error changing directory!. now exiting..."
 npm install || error_exit "error running npm install! now exiting... "
 
+#
+sudo cp /srv/www/mysite.com/node-app-A-conf.service /etc/systemd/system/node-app-A-conf.service
+sudo cp /srv/www/mysite.com/node-app-B-conf.service /etc/systemd/system/node-app-B-conf.service
+
 # update nginx configurations
 sudo ln -s /srv/www/mysite.com/etc.nginx.node-server.nginx /etc/nginx/sites-available/mysite.com
 sudo ln -s /srv/www/mysite.com/etc.nginx.node-server.nginx /etc/nginx/sites-enabled/mysite.com
 sudo ln -s /srv/www/mysite.com/etc.nginx.node-server.nginx /etc/nginx/sites-available/mysite.com
 sudo ln -s /srv/www/mysite.com/etc.nginx.node-server.nginx /etc/nginx/sites-enabled/mysite.com
-
-#
-sudo cp /srv/www/mysite.com/node-app-A-conf.service /etc/systemd/system/node-app-A-conf.service
-sudo cp /srv/www/mysite.com/node-app-B-conf.service /etc/systemd/system/node-app-B-conf.service
 
 # restart service; enabled user published to be a sudoer (use "sudo visudo" to enable user)
 sudo systemctl restart node-app-A-conf.service
