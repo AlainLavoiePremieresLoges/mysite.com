@@ -1,6 +1,6 @@
 var myServer="ServerB"
 var myCounter=0;
-var serverPort = 5001;
+var serverPort = 3001;
 var serverAddress = '192.168.1.142';
 
 var express = require('express');

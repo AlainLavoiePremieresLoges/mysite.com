@@ -3,10 +3,10 @@ ExecStart=/usr/bin/nodejs /srv/www/mysite.com/serverB.js
 Restart=always
 StandardOutput=syslog
 StandardError=syslog
-SyslogIdentifier=node-app-5001
+SyslogIdentifier=node-app-3001
 User=alainlavoie
 Group=alainlavoie
-Environment=NODE_ENV=production PORT=5001
+Environment=NODE_ENV=production PORT=3001
 
 [Install]
 WantedBy=multi-user.target
