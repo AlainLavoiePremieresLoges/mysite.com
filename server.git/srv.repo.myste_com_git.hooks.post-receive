@@ -19,6 +19,6 @@ sudo ln -s /srv/www/mysite.com/etc.nginx.node-server.nginx /etc/nginx/sites-avai
 sudo ln -s /srv/www/mysite.com/etc.nginx.node-server.nginx /etc/nginx/sites-enabled/mysite.com
 
 # restart service; enabled user published to be a sudoer (use "sudo visudo" to enable user)
+sudo systemctl daemon-reload 
 sudo systemctl restart node-app-A-conf.service
 sudo systemctl restart node-app-B-conf.service
-sudo systemctl daemon-reload 
