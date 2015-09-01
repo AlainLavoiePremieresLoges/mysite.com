@@ -10,15 +10,14 @@ var fs = require('fs');
 var logDirectory = __dirname + '/logs';
 var winston = require('winston');
 
+var logger = new (winston.Logger)({
+  transports: [
+    new (winston.transports.Console)(),
+    new (winston.transports.File)({ filename: '/srv/www/mysite.com/logs/server-console.log' })
+  ]
+});
 
-//var logger = new (winston.Logger)({
-//  transports: [
-//    new (winston.transports.Console)(),
-//    new (winston.transports.File)({ filename: 'server-console.log' })
-//  ]
-//});
-//
-//logger.log('info', 'First');
+logger.log('info', 'First');
 
 app.get('/', function (req, res) {
   res.send('Express site, counter=' + myCounter++);
