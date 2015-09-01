@@ -1,5 +1,5 @@
 [Service]
-ExecStart=/usr/bin/nodejs /srv/www/mysite.com/serverA.js Server[M] 3000 127.0.0.1 
+ExecStart=/usr/bin/nodejs /srv/www/mysite.com/serverA.js Server[N] 3000 127.0.0.1 
 Restart=always
 StandardOutput=syslog
 StandardError=syslog
