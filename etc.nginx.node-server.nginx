@@ -1,6 +1,5 @@
 upstream abcmysite_com {
-   server 127.0.0.1:5000 fail_timeout=0;
-   server 127.0.0.1:5001 fail_timeout=0;
+   server 127.0.0.1:5000
 }
 
 server {
@@ -32,7 +31,7 @@ server {
     }
 
     location /public/ {
-        root /srv/www/mysite.com;
+        root /srv/www/mysite.com/public;
     }
     
     access_log /srv/www/mysite.com/logs/access.log;
