@@ -1,12 +1,12 @@
 [Service]
-ExecStart=/usr/bin/nodejs /srv/www/mysite.com/serverA.js Server[M] 5000 127.0.0.1 
+ExecStart=/usr/bin/nodejs /srv/www/mysite.com/serverA.js Server[M] 3000 127.0.0.1 
 Restart=always
 StandardOutput=syslog
 StandardError=syslog
-SyslogIdentifier=node-app-5000
+SyslogIdentifier=node-app-3000
 User=alainlavoie
 Group=alainlavoie
-Environment=NODE_ENV=production PORT=5000
+Environment=NODE_ENV=production PORT=3000
 
 [Install]
 WantedBy=multi-user.target
