@@ -21,6 +21,7 @@ var logger = new (winston.Logger)({
     transports: [
       new (winston.transports.Console)(),
       new( winston.transports.DailyRotateFile)({
+	  maxsize: 200000,  // bytes
           filename: 'server-logger',
           dirname: '/srv/www/mysite.com/logs',
           datePattern: '.yyyy-MM-dd',
