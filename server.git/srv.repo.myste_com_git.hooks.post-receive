@@ -13,8 +13,8 @@ npm install || error_exit "error running npm install! now exiting... "
 # update nginx configurations
 sudo ln -s /srv/www/mysite.com/etc.nginx.node-server.nginx /etc/nginx/sites-available/mysite.com
 sudo ln -s /srv/www/mysite.com/etc.nginx.node-server.nginx /etc/nginx/sites-enabled/mysite.com
-#sudo ln -s /srv/www/mysite.com/etc.nginx.node-server.nginx /etc/nginx/sites-available/mysite.com
-#sudo ln -s /srv/www/mysite.com/etc.nginx.node-server.nginx /etc/nginx/sites-enabled/mysite.com
+sudo ln -s /srv/www/mysite.com/etc.nginx.node-server.nginx /etc/nginx/sites-available/mysite.com
+sudo ln -s /srv/www/mysite.com/etc.nginx.node-server.nginx /etc/nginx/sites-enabled/mysite.com
 
 #
 sudo cp /srv/www/mysite.com/node-app-A-conf.service /etc/systemd/system/node-app-A-conf.service
