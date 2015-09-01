@@ -10,16 +10,22 @@ var morgan = require('morgan');
 var fs = require('fs');
 var logDirectory = __dirname + '/logs';
 var winston = require('winston');
- 
-winston.log('info', 'Hello distributed log files!');
-winston.info('Hello again distributed logs');
-winston.level = 'debug';
-winston.log('debug', 'Now my debug messages are written to console!');
+
+
+var logger = new (winston.Logger)({
+  transports: [
+    new (winston.transports.Console)(),
+    new (winston.transports.File)({ filename: 'server-console.log' })
+  ]
+});
+
+logger.log('info', 'First');
 
 //fs.existsSync(logDirectory) || fs.mkdirSync(logDirectory);
 
 // create a rotating write stream
 //var accessLogStream = FileStreamRotator.getStream({
+
 //  filename: logDirectory + '/access-%DATE%.log',
 //  frequency: 'daily',
 //  verbose: false
