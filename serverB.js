@@ -7,13 +7,13 @@ var express = require('express');
 var app = express();
 
 app.get('/', function (req, res) {
-  res.send('Express site');
+  res.send('Express site, counter=' + myCounter++);
 });
 
 var server = app.listen(serverPort, function () {
   var host = server.address().address;
   var port = server.address().port;
 
-    console.log('Example app listening at http://%s:%s, counter=%d', host, port, myCounter++);
+    console.log('Example app listening at http://%s:%s', host, port);
 });
 
