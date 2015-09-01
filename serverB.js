@@ -9,11 +9,24 @@ var morgan = require('morgan');
 var fs = require('fs');
 var logDirectory = __dirname + '/logs';
 var winston = require('winston');
+var moment = require('moment');
+
+var timeFormatFn = function() {
+    'use strict';
+    return moment().format('HH.mm.ss:SSSS');
+};
 
 var logger = new (winston.Logger)({
-  transports: [
-    new (winston.transports.Console)(),
-    new (winston.transports.File)({ dirname: '/srv/www/mysite.com/logs' })
+    exitOnError: false,
+    transports: [
+      new (winston.transports.Console)(),
+      new( winston.transports.DailyRotateFile)({
+          filename: 'server-logger',
+          dirname: '/srv/www/mysite.com/logs',
+          datePattern: '.yyyy-MM-dd',
+          timestamp: timeFormatFn
+      })
+      //    new (winston.transports.File)({ dirname: '/srv/www/mysite.com/logs' })
   ]
 });
 
