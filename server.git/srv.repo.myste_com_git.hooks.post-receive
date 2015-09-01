@@ -15,7 +15,7 @@ sudo cp /srv/www/mysite.com/node-app-A-conf.service /etc/systemd/system/node-app
 sudo cp /srv/www/mysite.com/node-app-B-conf.service /etc/systemd/system/node-app-B-conf.service
 
 # update nginx configurations
-echo "About to erase "
+echo "About to erase sites-available"
 sudo rm /etc/nginx/sites-available/mysite.com
 sudo ln -sf /srv/www/mysite.com/etc.nginx.node-server.nginx /etc/nginx/sites-available/mysite.com
 sudo rm /etc/nginx/sites-enabled/mysite.com
