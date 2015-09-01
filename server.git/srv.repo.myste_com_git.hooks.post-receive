@@ -25,7 +25,7 @@ sudo ln -sf /srv/www/mysite.com/etc.nginx.node-server.nginx /etc/nginx/sites-ena
 sudo systemctl reenable node-app-A-conf.service
 sudo systemctl restart node-app-A-conf.service
 sudo systemctl daemon-reload
-sudo systemctl reenable node-app-A-conf.service
+sudo systemctl reenable node-app-B-conf.service
 sudo systemctl restart node-app-B-conf.service
 sudo systemctl daemon-reload
 
