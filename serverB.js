@@ -13,7 +13,7 @@ var winston = require('winston');
 var logger = new (winston.Logger)({
   transports: [
     new (winston.transports.Console)(),
-    new (winston.transports.File)({ filename: '/srv/www/mysite.com/logs/server-console.log' })
+    new (winston.transports.File)({ dirname: '/srv/www/mysite.com/logs' })
   ]
 });
 
