@@ -15,8 +15,8 @@ sudo cp /srv/www/mysite.com/node-app-A-conf.service /etc/systemd/system/node-app
 sudo cp /srv/www/mysite.com/node-app-B-conf.service /etc/systemd/system/node-app-B-conf.service
 
 # update nginx configurations
-sudo ln -s /srv/www/mysite.com/etc.nginx.node-server.nginx /etc/nginx/sites-available/mysite.com
-sudo ln -s /srv/www/mysite.com/etc.nginx.node-server.nginx /etc/nginx/sites-enabled/mysite.com
+sudo ln -sf /srv/www/mysite.com/etc.nginx.node-server.nginx /etc/nginx/sites-available/mysite.com
+sudo ln -sf /srv/www/mysite.com/etc.nginx.node-server.nginx /etc/nginx/sites-enabled/mysite.com
 
 # restart service; enabled user published to be a sudoer (use "sudo visudo" to enable user)
 sudo systemctl daemon-reload 
