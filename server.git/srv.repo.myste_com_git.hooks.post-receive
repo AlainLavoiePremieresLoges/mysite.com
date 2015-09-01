@@ -30,3 +30,5 @@ sudo systemctl reenable node-app-B-conf.service
 sudo systemctl restart node-app-B-conf.service
 sudo systemctl daemon-reload
 
+sudo service nginx reload
+
