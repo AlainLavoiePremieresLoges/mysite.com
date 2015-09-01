@@ -4,7 +4,6 @@ upstream abcmysite_com {
 
 server {
     listen 80;
-    index index.html index.htm;
     server_name abcmysite.com;
 
 
