@@ -1,0 +1,5 @@
+git add .
+git commit -m 'for server upgrade'
+git push
+git pull
+git push production master
