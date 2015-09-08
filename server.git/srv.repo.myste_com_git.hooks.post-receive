@@ -24,7 +24,7 @@ sudo ln -sf /srv/www/mysite.com/server.git/etc.nginx.node-server.nginx /etc/ngin
 
 # restart service; enabled user published to be a sudoer (use "sudo visudo" to enable user)
 echo "Restarting services"
-stop mysite-com
-start mysite-com
-service nginx reload
+sudo stop mysite-com
+sudo start mysite-com
+sudo service nginx reload
 
