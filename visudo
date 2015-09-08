@@ -30,7 +30,7 @@ root	ALL=(ALL:ALL) ALL
 
 #AL
 
-WEB_APP_MANAGER ALL = NOPASSWD: /bin/systemctl, /bin/cp, /etc/systemd/system/node-app-B-conf.service, /etc/systemd/system/node-app-A-conf.service, /bin/ln, /bin/rm, /usr/sbin/nginx, /usr/bin/npm, /usr/sbin/service
+WEB_APP_MANAGER ALL = NOPASSWD: /bin/cp, /etc/systemd/system/node-app-B-conf.service, /etc/systemd/system/node-app-A-conf.service, /bin/ln, /bin/rm, /usr/sbin/nginx, /usr/bin/npm, /usr/sbin/service, /sbin/start, /sbin/stop
 #
 
 
