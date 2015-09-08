@@ -17,7 +17,6 @@ npm install || error_exit "error running npm install! now exiting... "
 echo "About to overwrite upstart configurations"
 sudo cp /srv/www/mysite.com/server.git/mysite-com.conf /etc/init/ || error_exit "error copying new upstart config now exiting... "
 
-# update nginx configurations                                                                                                                                      
 echo "About to overwrite Nginx configurations"
 sudo ln -sf /srv/www/mysite.com/server.git/etc.nginx.node-server.nginx /etc/nginx/sites-available/mysite.com
 sudo ln -sf /srv/www/mysite.com/server.git/etc.nginx.node-server.nginx /etc/nginx/sites-enabled/mysite.com
