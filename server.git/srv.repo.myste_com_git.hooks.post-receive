@@ -25,12 +25,6 @@ sudo ln -sf /srv/www/mysite.com/server.git/etc.nginx.node-server.nginx /etc/ngin
 echo "Restarting services"
 stop mysite-com
 start mysite-com
-#sudo systemctl restart node-app-A-conf.service
-#sudo systemctl daemon-reload
-#sudo systemctl reenable node-app-B-conf.service
-#sudo systemctl restart node-app-B-conf.service
-#sudo systemctl daemon-reload
-#sudo restart node-app-A-conf.service
 
-sudo service nginx reload
+service nginx reload
 
