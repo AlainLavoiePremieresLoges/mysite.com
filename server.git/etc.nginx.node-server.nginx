@@ -1,6 +1,6 @@
 upstream abcmysite_com {
-   server 127.0.0.1:3000;
-   server 127.0.0.1:3001;
+   server 192.168.1.126:3000;
+   server 192.168.1.126:3001;
 }
 
 server {

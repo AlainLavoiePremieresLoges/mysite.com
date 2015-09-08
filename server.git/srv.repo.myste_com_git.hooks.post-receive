@@ -16,10 +16,10 @@ sudo cp /srv/www/mysite.com/server.git/mysite.com.upstart.conf /etc/init/
 
 # update nginx configurations                                                                                                                                      
 echo "About to overwrite Nginx configurations"
-sudo ln -sf /srv/www/mysite.com/etc.nginx.node-server.nginx /etc/nginx/sites-available/mysite.com
-sudo ln -sf /srv/www/mysite.com/etc.nginx.node-server.nginx /etc/nginx/sites-enabled/mysite.com
-sudo ln -sf /srv/www/mysite.com/etc.nginx.node-server.nginx /etc/nginx/sites-available/mysite.com
-sudo ln -sf /srv/www/mysite.com/etc.nginx.node-server.nginx /etc/nginx/sites-enabled/mysite.com
+sudo ln -sf /srv/www/mysite.com/server.git/etc.nginx.node-server.nginx /etc/nginx/sites-available/mysite.com
+sudo ln -sf /srv/www/mysite.com/server.git/etc.nginx.node-server.nginx /etc/nginx/sites-enabled/mysite.com
+sudo ln -sf /srv/www/mysite.com/server.git/etc.nginx.node-server.nginx /etc/nginx/sites-available/mysite.com
+sudo ln -sf /srv/www/mysite.com/server.git/etc.nginx.node-server.nginx /etc/nginx/sites-enabled/mysite.com
 
 # restart service; enabled user published to be a sudoer (use "sudo visudo" to enable user)
 echo "Restarting services"
