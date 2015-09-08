@@ -7,7 +7,7 @@ error_exit ()
 }
 
 git --work-tree=/srv/www/mysite.com --git-dir=/srv/repo/mysite.com.git checkout -f
-cp /srv/www/mysite.com/server.git/srv.repo.myste_com_git.hooks.post-receive /srv/repo/mysite.com.git/hooks/post-receive || error_exit "copying git hook!. now exiting..."
+cp /srv/www/mysite.com/server.git/srv.repo.myste_com_git.hooks.post-receive  /srv/repo/mysite.com.git/hooks/post-receive || error_exit "copying git hook!. now exiting..."
 
 cd /srv/www/mysite.com || error_exit "error changing directory!. now exiting..."
 
